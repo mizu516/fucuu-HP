@@ -1,0 +1,11 @@
+# Backups and archives
+*.zip
+*.tar.gz
+*.rar
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Agent specific files
+.agents/
