@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fucuu.net/sitemap.xml
+Sitemap: https://info.fucuu.net/sitemap.xml
