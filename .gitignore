@@ -9,3 +9,4 @@ Thumbs.db
 
 # Agent specific files
 .agents/
+.env
