@@ -80,21 +80,20 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem 0;
     z-index: 1000;
     background: rgba(253, 251, 247, 0.98);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--color-border);
-    min-height: 80px; /* Slightly increased for logo safety */
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 70px; /* Reduced from 80px as it's more stable on left */
+    padding: 0.75rem 0;
 }
 
 .logo {
@@ -168,6 +167,52 @@ nav {
 }
 
 .nav-links-small a:hover {
+    color: var(--color-primary);
+}
+
+/* --- TOC Nav (目次リンク) --- */
+.nav-toc {
+    background: rgba(253, 251, 247, 0.95);
+    border-top: 1px solid rgba(142, 151, 117, 0.08);
+    padding: 0.6rem 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.nav-toc::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.nav-toc-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+@media (min-width: 769px) {
+    .nav-toc-inner {
+        justify-content: center;
+        gap: 2.5rem;
+    }
+}
+
+.nav-toc a {
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0;
+    transition: var(--transition-base);
+}
+
+@media (min-width: 1024px) {
+    .nav-toc a {
+        font-size: 0.75rem;
+    }
+}
+
+.nav-toc a:hover {
     color: var(--color-primary);
 }
 
