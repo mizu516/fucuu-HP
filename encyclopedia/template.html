@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}} | fucuu (フクウ) Journal</title>
-    <meta name="description" content="{{description}}">
+    <title>{{name}}（{{kanji}}） | 生薬図鑑 | fucuu (フクウ)</title>
+    <meta name="description" content="{{name}}（{{kanji}}）の効能とセルフケアでの活用法。fucuu（フクウ）の生薬入浴剤「ふくのゆ」に込められた自然の力を詳しくご紹介します。">
     <link rel="stylesheet" href="../index.css">
-    <link rel="canonical" href="https://info.fucuu.net/journal/{{slug}}.html">
+    <link rel="canonical" href="https://info.fucuu.net/encyclopedia/{{slug}}.html">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="{{title}} | fucuu (フクウ) Journal">
-    <meta property="og:description" content="{{description}}">
+    <meta property="og:title" content="{{name}}（{{kanji}}） | 生薬図鑑 | fucuu (フクウ)">
+    <meta property="og:description" content="{{name}}（{{kanji}}）の効能とセルフケアでの活用法。植物の力で「わたしに戻る」時間を。">
     <meta property="og:image" content="../assets/journal_default.png">
     <meta property="og:type" content="article">
 </head>
@@ -29,7 +29,7 @@
                 <ul class="nav-links-small">
                     <li><a href="../index.html#about">About</a></li>
                     <li><a href="../index.html#products">Products</a></li>
-                    <li><a href="index.html">Journal</a></li>
+                    <li><a href="../journal/index.html">Journal</a></li>
                 </ul>
                 <a href="https://www.fucuu.net" class="desktop-cta" target="_blank" rel="noopener noreferrer">Shop Now</a>
             </div>
@@ -39,30 +39,23 @@
     <main style="padding-top: 150px;">
         <article class="container" style="max-width: 800px; margin: 0 auto;">
             <header style="margin-bottom: var(--space-l); text-align: center;">
-                <span class="fucuu-accent" style="font-size: 0.9rem; letter-spacing: 0.1em;">Journal</span>
-                <h1 style="font-size: clamp(1.8rem, 5vw, 2.8rem); margin-top: 1rem; line-height: 1.4;">{{title}}</h1>
-                <p style="color: var(--color-text-light); margin-top: 1rem;">{{date}}</p>
+                <span class="fucuu-accent" style="font-size: 0.9rem; letter-spacing: 0.1em;">Herb Encyclopedia</span>
+                <h1 style="font-size: clamp(1.8rem, 5vw, 2.8rem); margin-top: 1rem; line-height: 1.4;">{{name}}<br><span style="font-size: 1.2rem; opacity: 0.6;">{{kanji}}</span></h1>
             </header>
-
-            <!-- Featured Image Area -->
-            <div class="blog-image featured-image">
-                <img src="{{featured_image}}" alt="{{title}}">
-            </div>
 
             <div class="journal-content">
                 {{content}}
             </div>
 
+            <div style="margin-top: 4rem; padding: 2rem; background: #F8F6F2; border-radius: 8px; text-align: center;">
+                <h3 class="serif" style="margin-bottom: 1rem;">この生薬を体験する</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">{{name}}を含む10種の生薬を贅沢に配合。心と体を芯から整える100%生薬の入浴剤「ふくのゆ」。</p>
+                <a href="https://www.fucuu.net" target="_blank" rel="noopener noreferrer" class="btn">オンラインショップで見る</a>
+            </div>
+
             <footer style="margin-top: var(--space-xl); padding-top: var(--space-m); border-top: 1px solid var(--color-border);">
-                <div style="display: flex; align-items: center; gap: var(--space-m); background: #F8F6F2; padding: var(--space-m); border-radius: 8px;">
-                    <img src="../assets/brand_logo.png" alt="fucuu" style="width: 60px;">
-                    <div>
-                        <p style="font-weight: 500; color: var(--color-primary);">fucuu エディター</p>
-                        <p style="font-size: 0.85rem; color: var(--color-text-light);">植物の力で「わたしに戻る」時間を提案するfucuu編集部です。日々の養生やセルフケアのヒントをお届けします。</p>
-                    </div>
-                </div>
                 <div style="text-align: center; margin-top: var(--space-l);">
-                    <a href="index.html" class="link-arrow">Journal一覧へ戻る</a>
+                    <a href="../index.html#encyclopedia" class="link-arrow">図鑑一覧へ戻る</a>
                 </div>
             </footer>
         </article>
@@ -75,7 +68,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle (simplified for article)
         const menuToggle = document.getElementById('menuToggle');
         menuToggle.addEventListener('click', () => { window.location.href = '../index.html'; });
     </script>

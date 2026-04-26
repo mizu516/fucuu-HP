@@ -800,6 +800,7 @@ section#about::before {
     transition: var(--transition-base);
 }
 
+
 .testi-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
@@ -871,4 +872,156 @@ footer a {
 footer a:hover {
     color: var(--color-primary);
     opacity: 1;
+}
+
+/* --- Journal Article Specifics --- */
+.journal-content {
+    color: #333;
+    letter-spacing: 0.03em;
+}
+
+.journal-content h2 {
+    font-size: 1.8rem;
+    margin: 4rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+}
+
+.journal-content h3 {
+    font-size: 1.4rem;
+    margin: 2.5rem 0 1rem;
+    color: var(--color-primary);
+}
+
+.journal-content p {
+    margin-bottom: 1.8rem;
+    line-height: 2.1;
+}
+
+/* Image blocks */
+.blog-image {
+    margin: 3.5rem -1rem; /* Visual punch out */
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .blog-image { margin: 2.5rem 0; }
+}
+
+.blog-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.image-caption {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.featured-image {
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+
+.featured-image img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Decoration boxes */
+.tip-box {
+    background: #F8F6F2;
+    border-left: 4px solid var(--color-primary);
+    padding: 2.5rem;
+    margin: 3.5rem 0;
+    border-radius: 0 12px 12px 0;
+    font-size: 0.95rem;
+}
+
+.tip-box h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+    font-family: var(--font-serif);
+}
+
+.highlight-text {
+    background: linear-gradient(transparent 70%, #F1EDE4 70%);
+    font-weight: 500;
+}
+
+/* --- FAQ Section --- */
+.faq-list {
+    margin-top: var(--space-m);
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    padding: 1.5rem;
+    transition: var(--transition-base);
+}
+
+.faq-item[open] {
+    border-color: var(--color-primary);
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    padding-right: 2rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+/* --- Herb Link (Encyclopedia) --- */
+.herb-link {
+    display: block;
+    width: 100%;
+}
+
+.herb-link:hover .herb-name {
+    text-decoration: underline;
+}
+
+/* --- Contact Section Adjustments --- */
+#contact .btn {
+    padding: 1rem 3rem;
+    font-weight: 500;
 }

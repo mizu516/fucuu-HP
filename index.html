@@ -23,19 +23,67 @@
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "fucuu (フクウ)",
-      "alternateName": "fucuu",
-      "url": "https://info.fucuu.net",
-      "logo": "https://info.fucuu.net/assets/logo.png",
-      "sameAs": [
-        "https://www.instagram.com/fucuu.jp/",
-        "https://www.fucuu.net"
-      ],
-      "description": "100%生薬の入浴剤「ふくのゆ」と国産アロマを展開するセルフケアブランド。植物の力で『わたしに戻る』時間をお届けします。"
-    }
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "fucuu (フクウ)",
+        "alternateName": "fucuu",
+        "url": "https://info.fucuu.net",
+        "logo": "https://info.fucuu.net/assets/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/fucuu.jp/",
+          "https://www.fucuu.net"
+        ],
+        "description": "100%生薬の入浴剤「ふくのゆ」と国産アロマを展開するセルフケアブランド。植物の力で『わたしに戻る』時間をお届けします。"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "ふくのゆ（生薬入浴剤）",
+        "image": "https://info.fucuu.net/assets/bath_additive.png",
+        "description": "10種の和漢生薬100%処方の入浴剤。心と体を芯から温めます。",
+        "brand": {
+          "@type": "Brand",
+          "name": "fucuu"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.fucuu.net",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "赤ちゃんと一緒に入浴しても大丈夫ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "生後3ヶ月以降の、お肌が安定してきた時期からのご使用をおすすめしています。初めての場合は、まずは薄めの濃度から様子を見てあげてください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "妊娠中でも使用できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "基本的にはご使用いただけますが、妊娠中はお肌や香りに敏感になる時期です。体調に合わせて、心地よいと感じる範囲でお楽しみください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "残り湯を洗濯に使用できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "生薬由来の色素が衣類に付着する可能性があるため、すすぎは清水（水道水）で行ってください。また、おろしたての衣類へのご使用はお控えください。"
+            }
+          }
+        ]
+      }
+    ]
     </script>
 </head>
 <body>
@@ -192,44 +240,64 @@
                 </div>
             </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">チンピ（陳皮）</div>
-                    <div class="herb-desc">温め効果とリラックスする香りで、滞った気分を解きほぐします。</div>
+                    <a href="encyclopedia/chinpi.html" class="herb-link">
+                        <div class="herb-name serif">チンピ（陳皮）</div>
+                        <div class="herb-desc">温め効果とリラックスする香りで、滞った気分を解きほぐします。</div>
+                    </a>
                 </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">ガイヨウ（艾葉）</div>
-                    <div class="herb-desc">ヨモギの葉。芯から体を温める力が強く、養生に欠かせない生薬です。</div>
+                    <a href="encyclopedia/gaiyo.html" class="herb-link">
+                        <div class="herb-name serif">ガイヨウ（艾葉）</div>
+                        <div class="herb-desc">ヨモギの葉。芯から体を温める力が強く、養生に欠かせない生薬です。</div>
+                    </a>
                 </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">ケイヒ（桂皮）</div>
-                    <div class="herb-desc">シナモンとしても知られ、血行を促進して体の末端まで温もりを届けます。</div>
+                    <a href="encyclopedia/keihi.html" class="herb-link">
+                        <div class="herb-name serif">ケイヒ（桂皮）</div>
+                        <div class="herb-desc">シナモンとしても知られ、血行を促進して体の末端まで温もりを届けます。</div>
+                    </a>
                 </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">トウキ（当帰）</div>
-                    <div class="herb-desc">「巡りを整える」代名詞。女性の健やかな体づくりを支える貴重な生薬です。</div>
+                    <a href="encyclopedia/touki.html" class="herb-link">
+                        <div class="herb-name serif">トウキ（当帰）</div>
+                        <div class="herb-desc">「巡りを整える」代名詞。女性の健やかな体づくりを支える貴重な生薬です。</div>
+                    </a>
                 </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">サンシン（山梔子）</div>
-                    <div class="herb-desc">クチナシの実。余分な熱を鎮め、昂った気持ちをそっと落ち着かせます。</div>
+                    <a href="encyclopedia/sanshin.html" class="herb-link">
+                        <div class="herb-name serif">サンシン（山梔子）</div>
+                        <div class="herb-desc">クチナシの実。余分な熱を鎮め、昂った気持ちをそっと落ち着かせます。</div>
+                    </a>
                 </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">センキュウ（川キュウ）</div>
-                    <div class="herb-desc">血行に働きかけ、体のこわばりや重さをスッキリと解き放ちます。</div>
+                    <a href="encyclopedia/senkyu.html" class="herb-link">
+                        <div class="herb-name serif">センキュウ（川キュウ）</div>
+                        <div class="herb-desc">血行に働きかけ、体のこわばりや重さをスッキリと解き放ちます。</div>
+                    </a>
                 </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">ジュウヤク（十薬）</div>
-                    <div class="herb-desc">ドクダミ。肌を健やかに保ち、不要なものを溜めない清らかな体へ。</div>
+                    <a href="encyclopedia/juyaku.html" class="herb-link">
+                        <div class="herb-name serif">ジュウヤク（十薬）</div>
+                        <div class="herb-desc">ドクダミ。肌を健やかに保ち、不要なものを溜めない清らかな体へ。</div>
+                    </a>
                 </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">カミツレ（洋甘菊）</div>
-                    <div class="herb-desc">カモミール。高いリラックス効果で、緊張した心をふわりと緩めます。</div>
+                    <a href="encyclopedia/kamitsure.html" class="herb-link">
+                        <div class="herb-name serif">カミツレ（洋甘菊）</div>
+                        <div class="herb-desc">カモミール。高いリラックス効果で、緊張した心をふわりと緩めます。</div>
+                    </a>
                 </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">ウイキョウ（茴香）</div>
-                    <div class="herb-desc">フェンネル。温め効果に加え、お腹の調子や巡りをサポートします。</div>
+                    <a href="encyclopedia/uikyo.html" class="herb-link">
+                        <div class="herb-name serif">ウイキョウ（茴香）</div>
+                        <div class="herb-desc">フェンネル。温め効果に加え、お腹の調子や巡りをサポートします。</div>
+                    </a>
                 </div>
                 <div class="herb-item reveal">
-                    <div class="herb-name serif">ショウブ根（菖蒲根）</div>
-                    <div class="herb-desc">爽やかな香りで疲れた心身をリセットし、血行促進を助けます。</div>
+                    <a href="encyclopedia/shobukon.html" class="herb-link">
+                        <div class="herb-name serif">ショウブ根（菖蒲根）</div>
+                        <div class="herb-desc">爽やかな香りで疲れた心身をリセットし、血行促進を助けます。</div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -386,6 +454,60 @@
                 </div>
                 <div style="text-align: center; margin-top: var(--space-xl);">
                     <a href="journal/index.html" class="link-arrow">知恵の一覧を見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <div class="section-title text-center reveal">
+                <span class="subtitle">FAQ</span>
+                <h2>よくある質問</h2>
+            </div>
+            <div class="faq-list reveal" style="max-width: 800px; margin: 0 auto;">
+                <details class="faq-item">
+                    <summary>赤ちゃんと一緒に入浴しても大丈夫ですか？</summary>
+                    <div class="faq-answer">
+                        <p>生後3ヶ月以降の、お肌が安定してきた時期からのご使用をおすすめしています。初めての場合は、まずは薄めの濃度から様子を見てあげてください。もしお肌に合わないと感じられた場合は、すぐにご使用を中止してください。</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>妊娠中でも使用できますか？</summary>
+                    <div class="faq-answer">
+                        <p>基本的にはご使用いただけますが、妊娠中はお肌や香りに敏感になる時期です。体調に合わせて、心地よいと感じる範囲でお楽しみください。ご不安な場合は、かかりつけの医師にご相談されることをおすすめします。</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>残り湯を洗濯に使用できますか？</summary>
+                    <div class="faq-answer">
+                        <p>生薬由来の色素が衣類に付着する可能性があるため、すすぎは必ず清水（水道水）で行ってください。また、おろしたての衣類や大切な衣類へのご使用はお控えください。</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>風呂釜が傷むことはありませんか？（追い焚きについて）</summary>
+                    <div class="faq-answer">
+                        <p>本製品には風呂釜を傷める成分（硫黄など）は含まれておりませんが、生薬の細かな粉末が含まれるため、追い焚き機能の使用は避け、ご使用後は早めに洗い流すことをおすすめします。</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>ギフトラッピングは可能ですか？</summary>
+                    <div class="faq-answer">
+                        <p>はい、BASEオンラインショップにて承っております。大切な方への贈り物として、心を込めてお届けいたします。詳細はBASEの商品ページをご確認ください。</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-light">
+            <div class="container text-center reveal">
+                <div class="section-title">
+                    <span class="subtitle">Contact</span>
+                    <h2>お問い合わせ</h2>
+                    <p style="color: var(--color-text-light); margin-top: 1rem;">製品に関するご質問や、法人様のご相談などは<br>BASEのお問い合わせフォームより承っております。</p>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="https://thebase.in/inquiry/fucuu-base-shop" target="_blank" rel="noopener noreferrer" class="btn">お問い合わせフォームへ（BASE）</a>
                 </div>
             </div>
         </section>
