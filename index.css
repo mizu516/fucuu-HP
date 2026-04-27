@@ -281,6 +281,7 @@ nav {
 .hero-logo-large img {
     width: 100%;
     height: auto;
+    mix-blend-mode: multiply;
 }
 
 .hero-text h1 {
