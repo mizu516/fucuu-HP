@@ -19,8 +19,35 @@
     <!-- Open Graph -->
     <meta property="og:title" content="{{title}} | fucuu (フクウ) Journal">
     <meta property="og:description" content="{{description}}">
-    <meta property="og:image" content="../assets/journal_default.png">
+    <meta property="og:image" content="{{featured_image}}">
     <meta property="og:type" content="article">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{title}} | fucuu (フクウ) Journal",
+      "description": "{{description}}",
+      "datePublished": "{{date_iso}}",
+      "image": "{{featured_image_url}}",
+      "author": {
+        "@type": "Organization",
+        "name": "fucuu"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "fucuu",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://fucuu.netlify.app/assets/brand_character.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://fucuu.netlify.app/journal/{{slug}}.html"
+      }
+    }
+    </script>
 </head>
 <body>
     <nav>
@@ -59,6 +86,12 @@
 
             <div class="journal-content">
                 {{content}}
+            </div>
+
+            <!-- BASE購入ボタン -->
+            <div style="text-align: center; margin: var(--space-xl) 0; padding: var(--space-l); background: #F8F6F2; border-radius: 8px;">
+                <p style="color: var(--color-text-light); margin-bottom: 1.5rem; font-size: 0.95rem;">fucuuの生薬入浴剤・国産アロマは、BASEオンラインショップでご購入いただけます。</p>
+                <a href="https://www.fucuu.net/items/114522878" target="_blank" rel="noopener noreferrer" class="btn">BASEで購入する</a>
             </div>
 
             <footer style="margin-top: var(--space-xl); padding-top: var(--space-m); border-top: 1px solid var(--color-border);">
