@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
-Sitemap: https://fucuu.netlify.app/sitemap.xml
+Sitemap: https://fucuu.jp/sitemap.xml
