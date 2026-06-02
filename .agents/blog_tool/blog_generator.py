@@ -235,6 +235,25 @@ def save_to_history(article_data, file_name):
     with open(HISTORY_PATH, 'w', encoding='utf-8') as f:
         json.dump(history, f, indent=2, ensure_ascii=False)
 
+def update_rss(article_data):
+    rss_path = "../../rss.xml"
+    if not os.path.exists(rss_path): return
+    with open(rss_path, 'r', encoding='utf-8') as f:
+        rss = f.read()
+    
+    date_str = datetime.date.today().strftime("%Y.%m.%d")
+    new_item = f"""  <item>
+    <title>{article_data['title']}</title>
+    <link>https://fucuu.jp/journal/{article_data['slug']}.html</link>
+    <description>{article_data['description']}</description>
+    <pubDate>{date_str}</pubDate>
+  </item>
+"""
+    
+    rss = rss.replace("<channel>", f"<channel>\n{new_item}")
+    with open(rss_path, 'w', encoding='utf-8') as f:
+        f.write(rss)
+
 if __name__ == "__main__":
     import sys
     
@@ -258,11 +277,11 @@ if __name__ == "__main__":
         fname = create_html(article)
         update_index(article, fname)
         update_sitemap(article['slug'])
+        update_rss(article)
         save_to_history(article, fname)
         print(f"\nDone! Article created at: journal/{fname}")
         
         # 4. デプロイ確認
-        # 自動化モードの場合は、引数（例: --auto）があれば勝手にデプロイするようにしてもよい
         if "--auto" in sys.argv:
             deploy = True
         else:
@@ -271,7 +290,6 @@ if __name__ == "__main__":
             
         if deploy:
             print("Deploying...")
-            # Windowsのos.systemではダブルクォートを使用
             os.system('cd ../.. && git add . && git commit -m "Auto-publish rich blog" && git push origin main')
             print("Successfully published!")
             
