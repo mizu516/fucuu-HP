@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Kiwi+Maru:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Kiwi+Maru:wght@500&display=swap');
 
 :root {
     /* Color Palette */
@@ -40,7 +40,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, .serif {
+h1, h2, h3, .serif, .hero-title {
     font-family: var(--font-serif);
     font-weight: 400;
     letter-spacing: 0.12em;
@@ -58,6 +58,17 @@ img {
 }
 
 /* Utilities */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -284,7 +295,7 @@ nav {
     mix-blend-mode: multiply;
 }
 
-.hero-text h1 {
+.hero-text h1, .hero-text .hero-title {
     font-size: clamp(2rem, 8vw, 3.5rem);
     line-height: 1.6;
     margin-bottom: var(--space-s);
@@ -316,7 +327,7 @@ nav {
 
 /* Tablet & Desktop Layout */
 @media (min-width: 1024px) {
-    .hero-text h1 {
+    .hero-text h1, .hero-text .hero-title {
         margin-bottom: var(--space-m);
         line-height: 1.4;
     }
@@ -374,7 +385,7 @@ section {
 section#about {
     position: relative;
     padding: var(--space-xl) 0;
-    background-image: url('assets/philosophy_bg.png');
+    background-image: url('assets/philosophy_bg.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -589,10 +600,10 @@ section#about::before {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
-.bg-onkatsu { background: linear-gradient(135deg, rgba(255, 245, 243, 0.8) 0%, rgba(247, 220, 217, 0.8) 100%), url('assets/ritual_onkatsu.png'); background-size: cover; background-position: center; }
-.bg-anmin { background: linear-gradient(135deg, rgba(244, 246, 240, 0.8) 0%, rgba(226, 232, 216, 0.8) 100%), url('assets/ritual_anmin.png'); background-size: cover; background-position: center; }
-.bg-skin { background: linear-gradient(145deg, rgba(240, 247, 247, 0.8) 0%, rgba(216, 232, 232, 0.8) 100%), url('assets/ritual_skin.png'); background-size: cover; background-position: center; }
-.bg-reset { background: linear-gradient(155deg, rgba(248, 248, 248, 0.8) 0%, rgba(232, 232, 232, 0.8) 100%), url('assets/ritual_reset.png'); background-size: cover; background-position: center; }
+.bg-onkatsu { background: linear-gradient(135deg, rgba(255, 245, 243, 0.8) 0%, rgba(247, 220, 217, 0.8) 100%), url('assets/ritual_onkatsu.webp'); background-size: cover; background-position: center; }
+.bg-anmin { background: linear-gradient(135deg, rgba(244, 246, 240, 0.8) 0%, rgba(226, 232, 216, 0.8) 100%), url('assets/ritual_anmin.webp'); background-size: cover; background-position: center; }
+.bg-skin { background: linear-gradient(145deg, rgba(240, 247, 247, 0.8) 0%, rgba(216, 232, 232, 0.8) 100%), url('assets/ritual_skin.webp'); background-size: cover; background-position: center; }
+.bg-reset { background: linear-gradient(155deg, rgba(248, 248, 248, 0.8) 0%, rgba(232, 232, 232, 0.8) 100%), url('assets/ritual_reset.webp'); background-size: cover; background-position: center; }
 
 .ritual-card-content {
     background: rgba(255, 255, 255, 0.45);
@@ -911,3 +922,164 @@ footer a:hover {
         height: 50px;
     }
 }
+
+/* --- Journal UI Improvements --- */
+.breadcrumbs {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+}
+.breadcrumbs a {
+    color: var(--color-primary);
+}
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.tag-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+.tag-filter-btn {
+    background: white;
+    border: 1px solid var(--color-border);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+.tag-filter-btn.active, .tag-filter-btn:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.load-more-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+.hidden-article {
+    display: none !important;
+}
+
+.related-articles {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--color-border);
+}
+.related-articles h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.related-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: var(--transition-base);
+}
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.related-card img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100%;
+}
+.related-card-content {
+    padding: 1rem;
+}
+.related-card-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+/* --- Reviews (Voice) --- */
+.testi-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.testi-tab-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition-base);
+}
+.testi-tab-btn.active, .testi-tab-btn:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.testi-content {
+    display: none;
+}
+.testi-content.active {
+    display: block;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.testi-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid var(--color-border);
+}
+.testi-stars {
+    color: #F5B041;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.testi-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+.testi-author {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-align: right;
+}
+
+/* --- Diagnosis Quiz --- */
+.quiz-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: #FDFBF7;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition-base);
+}
+.quiz-btn:hover {
+    background: rgba(122, 133, 97, 0.1);
+    border-color: var(--color-primary);
+}
+

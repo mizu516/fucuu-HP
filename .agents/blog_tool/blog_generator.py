@@ -99,8 +99,8 @@ def get_image_url(slug, index=0, style="photo"):
     Now follows a local naming convention.
     """
     if index == 0:
-        return f"../assets/journal/{slug}-hero.png"
-    return f"../assets/journal/{slug}-{index}.png"
+        return f"../assets/journal/{slug}-hero.webp"
+    return f"../assets/journal/{slug}-{index}.webp"
 
 def create_html(article_data):
     with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
@@ -110,14 +110,14 @@ def create_html(article_data):
     
     # 画像の取得（ローカルパス運用に変更）
     slug = article_data['slug']
-    featured_img = f"../assets/journal/{slug}-hero.png"
+    featured_img = f"../assets/journal/{slug}-hero.webp"
 
     # 本文内の [IMAGE: ...] タグをローカル画像タグに置換
     content = article_data['content']
     image_tags = re.findall(r'\[IMAGE: (.*?)\]', content)
     for i, img_desc in enumerate(image_tags):
         # 1から始まるインデックス
-        img_url = f"../assets/journal/{slug}-{i+1}.png"
+        img_url = f"../assets/journal/{slug}-{i+1}.webp"
         replacement = f"""
         <div class="blog-image">
             <img src="{img_url}" alt="{img_desc}">
@@ -126,7 +126,7 @@ def create_html(article_data):
         content = content.replace(f"[IMAGE: {img_desc}]", replacement)
 
     date_iso = datetime.date.today().isoformat()
-    featured_img_url = f"https://fucuu.jp/assets/journal/{slug}-hero.png"
+    featured_img_url = f"https://fucuu.jp/assets/journal/{slug}-hero.webp"
 
     html = template.replace("{{title}}", article_data['title'])
     html = html.replace("{{description}}", article_data['description'])
@@ -166,18 +166,21 @@ def update_index(article_data, file_name):
     # Download image using pollinations.ai
     prompt_text = article_data.get('featured_image_prompt', f"calming {article_data['visual_style']} of herbal bath and self care")
     encoded_prompt = requests.utils.quote(prompt_text)
-    image_url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=800&height=450&nologo=true"
+    seed = random.randint(1, 1000000)
+    image_url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=800&height=450&nologo=true&seed={seed}"
     
     try:
+        from PIL import Image
+        import io
         img_data = requests.get(image_url).content
-        with open(os.path.join("../../assets/journal", f"{article_data['slug']}-hero.png"), 'wb') as img_file:
-            img_file.write(img_data)
+        img = Image.open(io.BytesIO(img_data))
+        img.save(os.path.join("../../assets/journal", f"{article_data['slug']}-hero.webp"), 'WEBP', quality=85)
     except Exception as e:
-        print(f"Failed to download image: {e}")
+        print(f"Failed to download or convert image: {e}")
         
     new_card.append(BeautifulSoup(f"""
         <div style="aspect-ratio: 16/9; overflow: hidden; border-bottom: 1px solid var(--color-border);">
-            <img src="../assets/journal/{article_data['slug']}-hero.png" alt="{article_data['title']}" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="../assets/journal/{article_data['slug']}-hero.webp" alt="{article_data['title']}" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div style="padding: 1.5rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
@@ -254,6 +257,17 @@ def update_rss(article_data):
     with open(rss_path, 'w', encoding='utf-8') as f:
         f.write(rss)
 
+def ping_google_sitemap():
+    try:
+        print("Pinging Google with new sitemap...")
+        response = requests.get("https://www.google.com/ping?sitemap=https://fucuu.jp/sitemap.xml")
+        if response.status_code == 200:
+            print("Successfully pinged Google!")
+        else:
+            print(f"Ping failed with status code {response.status_code}")
+    except Exception as e:
+        print(f"Error pinging Google: {e}")
+
 if __name__ == "__main__":
     import sys
     
@@ -292,6 +306,7 @@ if __name__ == "__main__":
             print("Deploying...")
             os.system('cd ../.. && git add . && git commit -m "Auto-publish rich blog" && git push origin main')
             print("Successfully published!")
+            ping_google_sitemap()
             
     except Exception as e:
         print(f"Error occurred: {e}")

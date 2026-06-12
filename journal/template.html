@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WBDEEYS5E7"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WBDEEYS5E7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-WBDEEYS5E7');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}} | fucuu (フクウ) Journal</title>
-    <meta name="description" content="{{description}}">
-    <link rel="stylesheet" href="../index.css">
-    <link rel="canonical" href="https://fucuu.jp/journal/{{slug}}.html">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="{{title}} | fucuu (フクウ) Journal">
-    <meta property="og:description" content="{{description}}">
-    <meta property="og:image" content="{{featured_image}}">
-    <meta property="og:type" content="article">
-
-    <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{title}} | fucuu (フクウ) Journal</title>
+<meta content="{{description}}" name="description"/>
+<link href="../index.css" rel="stylesheet"/>
+<link href="https://fucuu.jp/journal/{{slug}}.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="{{title}} | fucuu (フクウ) Journal" property="og:title"/>
+<meta content="{{description}}" property="og:description"/>
+<meta content="{{featured_image}}" property="og:image"/>
+<meta content="article" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
@@ -39,7 +39,7 @@
         "name": "fucuu",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://fucuu.jp/assets/brand_character.png"
+          "url": "https://fucuu.jp/assets/brand_character.webp"
         }
       },
       "mainEntityOfPage": {
@@ -50,72 +50,66 @@
     </script>
 </head>
 <body>
-    <nav>
-        <div class="container nav-content">
-            <div class="nav-left">
-                <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
-                    <span></span><span></span><span></span>
-                </button>
-                <div class="logo">
-                    <a href="../index.html"><img src="../assets/brand_character.png" alt="fucuu 公式ロゴ"></a>
-                </div>
-            </div>
-            <div class="nav-right">
-                <ul class="nav-links-small">
-                    <li><a href="../index.html#about">About</a></li>
-                    <li><a href="../index.html#products">Products</a></li>
-                    <li><a href="index.html">Journal</a></li>
-                </ul>
-                <a href="https://www.fucuu.net" class="desktop-cta" target="_blank" rel="noopener noreferrer">Shop Now</a>
-            </div>
-        </div>
-    </nav>
+<nav>
+<div class="container nav-content">
+<div class="nav-left">
+<button aria-label="メニューを開く" class="menu-toggle" id="menuToggle">
+<span></span><span></span><span></span>
+</button>
+<div class="logo">
+<a href="../index.html"><img alt="fucuu 公式ロゴ" src="../assets/brand_character.webp"/></a>
+</div>
+</div>
+<div class="nav-right">
+<ul class="nav-links-small">
+<li><a href="../index.html#about">About</a></li>
+<li><a href="../index.html#products">Products</a></li>
+<li><a href="index.html">Journal</a></li>
+</ul>
+<a class="desktop-cta" href="https://www.fucuu.net" rel="noopener noreferrer" target="_blank">Shop Now</a>
+</div>
+</div>
+</nav>
+<main style="padding-top: 150px;">
+<article class="container" style="max-width: 800px; margin: 0 auto;">
+<header style="margin-bottom: var(--space-l); text-align: center;"><div class="breadcrumbs"><a href="../index.html">ホーム</a> &gt; <a href="index.html">Journal</a> &gt; <span>{{title}}</span></div>
 
-    <main style="padding-top: 150px;">
-        <article class="container" style="max-width: 800px; margin: 0 auto;">
-            <header style="margin-bottom: var(--space-l); text-align: center;">
-                <span class="fucuu-accent" style="font-size: 0.9rem; letter-spacing: 0.1em;">Journal</span>
-                <h1 style="font-size: clamp(1.8rem, 5vw, 2.8rem); margin-top: 1rem; line-height: 1.4;">{{title}}</h1>
-                <p style="color: var(--color-text-light); margin-top: 1rem;">{{date}}</p>
-            </header>
-
-            <!-- Featured Image Area -->
-            <div class="blog-image featured-image">
-                <img src="{{featured_image}}" alt="{{title}}">
-            </div>
-
-            <div class="journal-content">
+<span class="fucuu-accent" style="font-size: 0.9rem; letter-spacing: 0.1em;">Journal</span>
+<h1 style="font-size: clamp(1.8rem, 5vw, 2.8rem); margin-top: 1rem; line-height: 1.4;">{{title}}</h1>
+<p style="color: var(--color-text-light); margin-top: 1rem;">{{date}}</p>
+</header>
+<!-- Featured Image Area -->
+<div class="blog-image featured-image">
+<img alt="{{title}}" src="{{featured_image}}"/>
+</div>
+<div class="journal-content">
                 {{content}}
             </div>
-
-            <!-- BASE購入ボタン -->
-            <div style="text-align: center; margin: var(--space-xl) 0; padding: var(--space-l); background: #F8F6F2; border-radius: 8px;">
-                <p style="color: var(--color-text-light); margin-bottom: 1.5rem; font-size: 0.95rem;">fucuuの生薬入浴剤・国産アロマは、BASEオンラインショップでご購入いただけます。</p>
-                <a href="https://www.fucuu.net/items/114522878" target="_blank" rel="noopener noreferrer" class="btn">BASEで購入する</a>
-            </div>
-
-            <footer style="margin-top: var(--space-xl); padding-top: var(--space-m); border-top: 1px solid var(--color-border);">
-                <div style="display: flex; align-items: center; gap: var(--space-m); background: #F8F6F2; padding: var(--space-m); border-radius: 8px;">
-                    <img src="../assets/brand_logo.png" alt="fucuu" style="width: 60px;">
-                    <div>
-                        <p style="font-weight: 500; color: var(--color-primary);">fucuu Journal 編集部</p>
-                        <p style="font-size: 0.85rem; color: var(--color-text-light);">植物の力で「わたしに戻る」時間を提案するfucuu公式ジャーナルです。フクウロウと一緒に、日々の養生やセルフケアのヒントをお届けします。</p>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: var(--space-l);">
-                    <a href="index.html" class="link-arrow">Journal一覧へ戻る</a>
-                </div>
-            </footer>
-        </article>
-    </main>
-
-    <footer style="background-color: var(--color-text); color: white; padding: var(--space-xl) 0; margin-top: var(--space-xl);">
-        <div class="container" style="text-align: center;">
-            <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 fucuu All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
+<!-- BASE購入ボタン -->
+<div class="related-articles"><h3 class="serif">こちらの記事もおすすめ</h3><div class="related-grid"><!-- Related articles will be generated here --></div></div><div style="text-align: center; margin: var(--space-xl) 0; padding: var(--space-l); background: #F8F6F2; border-radius: 8px;">
+<p style="color: var(--color-text-light); margin-bottom: 1.5rem; font-size: 0.95rem;">fucuuの生薬入浴剤・国産アロマは、BASEオンラインショップでご購入いただけます。</p>
+<a class="btn" href="https://www.fucuu.net/items/114522878" rel="noopener noreferrer" target="_blank">BASEで購入する</a>
+</div>
+<footer style="margin-top: var(--space-xl); padding-top: var(--space-m); border-top: 1px solid var(--color-border);">
+<div style="display: flex; align-items: center; gap: var(--space-m); background: #F8F6F2; padding: var(--space-m); border-radius: 8px;">
+<img alt="fucuu" src="../assets/brand_logo.webp" style="width: 60px;"/>
+<div>
+<p style="font-weight: 500; color: var(--color-primary);">fucuu Journal 編集部</p>
+<p style="font-size: 0.85rem; color: var(--color-text-light);">植物の力で「わたしに戻る」時間を提案するfucuu公式ジャーナルです。フクウロウと一緒に、日々の養生やセルフケアのヒントをお届けします。</p>
+</div>
+</div>
+<div style="text-align: center; margin-top: var(--space-l);">
+<a class="link-arrow" href="index.html">Journal一覧へ戻る</a>
+</div>
+</footer>
+</article>
+</main>
+<footer style="background-color: var(--color-text); color: white; padding: var(--space-xl) 0; margin-top: var(--space-xl);">
+<div class="container" style="text-align: center;">
+<p style="font-size: 0.8rem; opacity: 0.7;">© 2026 fucuu All Rights Reserved.</p>
+</div>
+</footer>
+<script>
         // Mobile Menu Toggle (simplified for article)
         const menuToggle = document.getElementById('menuToggle');
         menuToggle.addEventListener('click', () => { window.location.href = '../index.html'; });

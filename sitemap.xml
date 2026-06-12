@@ -1,17 +1,12 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fucuu.jp/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://fucuu.jp/journal/guide-to-onkatsu-with-shoyaku.html</loc>
-    <lastmod>2026-04-23</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/journal/power-of-shoyaku-selfcare.html</loc>
     <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -21,13 +16,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fucuu.jp/journal/selfcare-bathing-routine-shouyaku.html</loc>
+    <loc>https://fucuu.jp/journal/power-of-shoyaku-selfcare.html</loc>
     <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fucuu.jp/journal/spring-fatigue-selfcare-tips.html</loc>
-    <lastmod>2026-04-26</lastmod>
+    <loc>https://fucuu.jp/journal/selfcare-bathing-routine-shouyaku.html</loc>
+    <lastmod>2026-04-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -41,54 +36,9 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fucuu.jp/encyclopedia/chinpi.html</loc>
+    <loc>https://fucuu.jp/journal/spring-fatigue-selfcare-tips.html</loc>
     <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/encyclopedia/gaiyo.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/encyclopedia/keihi.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/encyclopedia/touki.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/encyclopedia/sanshin.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/encyclopedia/senkyu.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/encyclopedia/juyaku.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/encyclopedia/kamitsure.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/encyclopedia/uikyo.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/encyclopedia/shobukon.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fucuu.jp/journal/selfcare-herbal-bath-tips.html</loc>
@@ -131,11 +81,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fucuu.jp/journal/selfcare-herbal-bath-ritual.html</loc>
-    <lastmod>2026-05-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://fucuu.jp/journal/selfcare-crude-drug-bath-wellness.html</loc>
     <lastmod>2026-05-08</lastmod>
     <priority>0.8</priority>
@@ -166,6 +111,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fucuu.jp/journal/selfcare-herbal-bath-ritual.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fucuu.jp/journal/shoyaku-selfcare-bath-ritual.html</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.8</priority>
@@ -193,11 +143,6 @@
   <url>
     <loc>https://fucuu.jp/journal/night-selfcare-warmth-herbs-aroma.html</loc>
     <lastmod>2026-05-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fucuu.jp/journal/night-selfcare-warm-lifestyle.html</loc>
-    <lastmod>2026-05-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -261,8 +206,73 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fucuu.jp/journal/night-selfcare-warm-lifestyle.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/journal/index.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fucuu.jp/journal/night-warm-care-herbal-bath.html</loc>
     <lastmod>2026-06-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/gaiyo.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/juyaku.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/kamitsure.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/keihi.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/sanshin.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/senkyu.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/shobukon.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/touki.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/uikyo.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/encyclopedia/chinpi.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fucuu.jp/journal/yakuso-bath-selfcare-tips.html</loc>
+    <lastmod>2026-06-12</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
