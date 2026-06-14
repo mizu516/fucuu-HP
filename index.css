@@ -1083,3 +1083,54 @@ footer a:hover {
     border-color: var(--color-primary);
 }
 
+/* Floating Shop Button */
+.floating-shop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--color-secondary);
+    color: white;
+    width: 85px;
+    height: 85px;
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(226, 140, 133, 0.4);
+    z-index: 1000;
+    text-decoration: none;
+    font-family: var(--font-serif);
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1.2;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: floating 6s ease-in-out infinite;
+}
+
+.floating-shop:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(226, 140, 133, 0.5);
+    color: white;
+}
+
+.floating-shop svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+    .floating-shop {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 75px;
+        height: 75px;
+        font-size: 0.7rem;
+    }
+    .floating-shop svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
