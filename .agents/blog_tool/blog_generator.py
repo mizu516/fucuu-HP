@@ -48,8 +48,18 @@ def get_automated_topic():
     出力形式: "キーワード/タイトル案" の形式で一行で出力してください。
     例: 温活 入浴剤/心まで温める、冬の夜の生薬入浴法
     """
-    response = model.generate_content(prompt)
-    return response.text.strip()
+    for attempt in range(3):
+        try:
+            response = model.generate_content(prompt)
+            return response.text.strip()
+        except Exception as e:
+            if "429" in str(e) or "quota" in str(e).lower():
+                import time
+                print("  API制限に到達しました。60秒待機して再試行します...")
+                time.sleep(60)
+            else:
+                raise e
+    raise Exception("トピック生成に失敗しました")
 
 def generate_article_content(topic_info):
     """
@@ -115,7 +125,22 @@ def generate_article_content(topic_info):
       "visual_style": "{chosen_style}"
     }}
     """
-    response = model.generate_content(prompt)
+    response = None
+    for attempt in range(3):
+        try:
+            response = model.generate_content(prompt)
+            break
+        except Exception as e:
+            if "429" in str(e) or "quota" in str(e).lower():
+                import time
+                print("  API制限に到達しました。60秒待機して再試行します...")
+                time.sleep(60)
+            else:
+                raise e
+    
+    if not response:
+        raise Exception("記事生成に失敗しました")
+
     json_str = re.search(r'\{.*\}', response.text, re.DOTALL).group()
     data = json.loads(json_str)
     data['visual_style'] = chosen_style
