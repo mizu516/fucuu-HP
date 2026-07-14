@@ -365,6 +365,16 @@ section {
     padding: var(--space-l) 0;
 }
 
+section[id] {
+    scroll-margin-top: 150px;
+}
+
+@media (max-width: 800px) {
+    section[id] {
+        scroll-margin-top: 88px;
+    }
+}
+
 @media (min-width: 769px) {
     section { padding: var(--space-xl) 0; }
 }
@@ -715,7 +725,7 @@ section#about::before {
 
 .herb-item {
     background: #fff;
-    padding: var(--space-m);
+    padding: 0;
     border: 1px solid var(--color-border);
     border-radius: 4px;
     display: flex;
@@ -731,9 +741,46 @@ section#about::before {
 }
 
 .herb-name {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--color-primary);
     font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.herb-part {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-light);
+    font-size: 0.7rem;
+}
+
+.herb-desc {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.9;
+}
+
+.herb-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1.35rem;
+    color: #a54a2a;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.herb-more::after {
+    content: '→';
+    transition: transform 0.2s ease;
+}
+
+.herb-link:hover .herb-more::after {
+    transform: translateX(4px);
 }
 
 /* --- Navigation / Footer Transitions --- */
@@ -884,12 +931,22 @@ footer a:hover {
 
 /* --- Herb Link (Encyclopedia) --- */
 .herb-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    min-height: 245px;
+    padding: 1.75rem;
 }
 
 .herb-link:hover .herb-name {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .herb-link {
+        min-height: 0;
+        padding: 1.5rem;
+    }
 }
 
 /* --- Contact Section Adjustments --- */

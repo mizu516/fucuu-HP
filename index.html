@@ -247,15 +247,15 @@
         <section id="diagnosis" style="background-color: var(--color-primary); color: white; padding: var(--space-xl) 0; margin-top: var(--space-l);">
             <div class="container">
                 <div class="section-title text-center reveal" style="margin-bottom: 2rem;">
-                    <span class="subtitle" style="color: #E28C85;">Diagnosis</span>
-                    <h2 style="color: white; font-family: var(--font-serif); letter-spacing: 0.1em; font-size: 1.8rem; margin-top: 0.5rem;">あなたにぴったりの温活診断</h2>
-                    <p style="color: rgba(255,255,255,0.8); margin-top: 1rem; font-size: 0.95rem;">3つの簡単な質問から、今のあなたに必要な生薬や香りをご提案します。</p>
+                    <span class="subtitle" style="color: #E28C85;">HERB FINDER</span>
+                    <h2 style="color: white; font-family: var(--font-serif); letter-spacing: 0; font-size: 1.8rem; margin-top: 0.5rem;">今夜、気になる植物はどれ？</h2>
+                    <p style="color: rgba(255,255,255,0.8); margin-top: 1rem; font-size: 0.95rem;">香りや植物の姿から、今の気分でひとつ選んでみませんか。正解はありません。直感でどうぞ。</p>
                 </div>
                 
                 <div id="quiz-container" class="reveal" style="background: white; color: var(--color-text); max-width: 600px; margin: 0 auto; border-radius: 8px; padding: 2.5rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     <div id="quiz-question-container">
                         <div style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 1rem;" id="quiz-step">Q1 / 3</div>
-                        <h3 id="quiz-question" style="font-size: 1.2rem; margin-bottom: 2rem;">最近、一番気になっているお悩みは？</h3>
+                        <h3 id="quiz-question" style="font-size: 1.2rem; margin-bottom: 2rem;">今夜のお風呂で、最初に感じたいのは？</h3>
                         <div id="quiz-options" style="display: flex; flex-direction: column; gap: 1rem;">
                             <!-- Options rendered by JS -->
                         </div>
@@ -264,8 +264,8 @@
                     <div id="quiz-result-container" style="display: none;">
                         <h3 style="font-size: 1.2rem; color: var(--color-text-light); margin-bottom: 1rem;">今日ご紹介する生薬</h3>
                         <div id="quiz-result-title" style="font-size: 1.6rem; font-family: var(--font-serif); margin-bottom: 1rem; color: var(--color-primary);">トウキ（当帰）</div>
-                        <p id="quiz-result-desc" style="margin-bottom: 2rem; line-height: 1.8; font-size: 0.95rem;">ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。</p>
-                        <a href="https://www.fucuu.net" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; display: block; margin-bottom: 1rem;">おすすめ製品を見る</a>
+                        <p id="quiz-result-desc" style="margin-bottom: 2rem; line-height: 1.8; font-size: 0.95rem;">細く枝分かれした根を使うトウキ。土と植物を思わせる、奥行きのある特有の香りを持つ生薬です。</p>
+                        <a href="fukunoyu.html" class="btn" style="width: 100%; display: block; margin-bottom: 1rem;">10種が入ったふくのゆを見る</a>
                         <button onclick="resetQuiz()" style="background: none; border: none; color: var(--color-text-light); text-decoration: underline; cursor: pointer; font-size: 0.9rem;">最初からやり直す</button>
                     </div>
                 </div>
@@ -276,79 +276,96 @@
         <section id="encyclopedia" class="container">
             <div class="section-title text-center reveal">
                 <span class="subtitle" style="color: var(--color-secondary);">10 Natural Herbs</span>
-                <h2>ふくのゆに配合された10種の生薬</h2>
-                <p>商品パッケージに表示された10種類の生薬をご紹介します。<br>個々の生薬と特定の症状を直接結びつけた説明は行っていません。</p>
+                <h2>袋の中で出会う、10の植物。</h2>
+                <p>みかんの果皮、ヨモギの葉、樹皮、根、小さな花。<br>姿も香りも違う10種がひとつの袋で重なり、ふくのゆの奥行きをつくります。</p>
             </div>
             <div class="herb-list">
-                <!-- ... herb items ... -->
-            </div>
-
                 <div class="herb-item reveal">
                     <a href="encyclopedia/chinpi.html" class="herb-link">
+                        <span class="herb-part">柑橘の果皮</span>
                         <div class="herb-name serif">チンピ（陳皮）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">温州みかんなどの成熟した果皮。明るい柑橘の芳香が、生薬らしい深い香りに爽やかさを重ねます。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
                 <div class="herb-item reveal">
                     <a href="encyclopedia/gaiyo.html" class="herb-link">
+                        <span class="herb-part">ヨモギの葉と枝先</span>
                         <div class="herb-name serif">ガイヨウ（艾葉）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">ヨモギまたはオオヨモギの葉と枝先。深い緑と、野の草を思わせる特有の香りを持ちます。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
                 <div class="herb-item reveal">
                     <a href="encyclopedia/keihi.html" class="herb-link">
+                        <span class="herb-part">樹皮</span>
                         <div class="herb-name serif">ケイヒ（桂皮）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">くるりと巻いた樹皮の姿を持つ生薬。甘さと辛さをあわせ持つ、温かみのある芳香が特徴です。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
                 <div class="herb-item reveal">
                     <a href="encyclopedia/touki.html" class="herb-link">
+                        <span class="herb-part">根</span>
                         <div class="herb-name serif">トウキ（当帰）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">細く枝分かれした根を使う生薬。土と植物を思わせる、奥行きのある特有の香りを持ちます。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
                 <div class="herb-item reveal">
                     <a href="encyclopedia/sanshin.html" class="herb-link">
+                        <span class="herb-part">クチナシの果実</span>
                         <div class="herb-name serif">サンシシ（山梔子）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">長卵形をしたクチナシの果実。黄褐色から黄赤色の姿が、植物そのものの色を感じさせます。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
                 <div class="herb-item reveal">
                     <a href="encyclopedia/senkyu.html" class="herb-link">
+                        <span class="herb-part">根茎</span>
                         <div class="herb-name serif">センキュウ（川芎）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">ごつごつとした根茎を使う生薬。灰褐色の素朴な姿と、印象に残る特有の香りがあります。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
                 <div class="herb-item reveal">
                     <a href="encyclopedia/juyaku.html" class="herb-link">
+                        <span class="herb-part">葉・茎・花穂</span>
                         <div class="herb-name serif">ジュウヤク（十薬）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">葉、茎、花穂を含む地上部を使う生薬。野に育つ植物の姿が、そのまま袋の中に息づきます。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
                 <div class="herb-item reveal">
                     <a href="encyclopedia/kamitsure.html" class="herb-link">
+                        <span class="herb-part">カモミールの花</span>
                         <div class="herb-name serif">カミツレ（加密列）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">カモミールとしても親しまれる小さな花。生薬の深い香りに、やさしい爽やかさを添えます。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
                 <div class="herb-item reveal">
                     <a href="encyclopedia/uikyo.html" class="herb-link">
+                        <span class="herb-part">フェンネルの果実</span>
                         <div class="herb-name serif">ウイキョウ（茴香）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">フェンネルとしても知られる細長い果実。どこか甘さを思わせる、個性的な芳香を持ちます。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
                 <div class="herb-item reveal">
                     <a href="encyclopedia/shobukon.html" class="herb-link">
+                        <span class="herb-part">植物の根</span>
                         <div class="herb-name serif">ショウブ根（菖蒲根）</div>
-                        <div class="herb-desc">ふくのゆに配合されている10種類の生薬の一つです。</div>
+                        <div class="herb-desc">名前の通り、根の部分を使う生薬。果皮や花だけでなく、植物の根まで入った一包の面白さを感じてください。</div>
+                        <span class="herb-more">その素顔をのぞく</span>
                     </a>
                 </div>
+            </div>
                 <!-- 生薬図鑑を読んだ後の購入導線 -->
                 <div class="text-center reveal" style="margin-top: var(--space-l); padding: var(--space-l) 0;">
-                    <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">10種の生薬を贅沢に配合した「ふくのゆ」を、ぜひお試しください。</p>
+                    <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">ひとつずつ知ると、湯の中で袋をもむ時間が、少し面白くなる。</p>
                     <a href="https://www.fucuu.net" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 1.2rem 3.5rem; font-size: 1.1rem; border-radius: 40px; background-color: var(--color-secondary); box-shadow: 0 10px 25px rgba(226, 140, 133, 0.3);">ふくのゆを購入する</a>
                 </div>
-            </div>
         </section>
 
         <!-- How to Use Section -->
@@ -424,7 +441,6 @@
                 <div class="story-image" style="aspect-ratio:1/1; overflow:hidden;">
                     <img src="assets/bath_additive.webp" alt="ふくのゆ 美湯" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
                 </div>
-            </div>
         </section>
 
         <!-- Self-care Wisdom Section (Formerly Journal) -->
@@ -647,43 +663,44 @@
         // Diagnosis Quiz Logic
         const quizData = [
             {
-                question: "最近、一番気になっているお悩みは？",
+                question: "今夜のお風呂で、最初に感じたいのは？",
                 options: [
-                    { text: "手足が冷えてつらい", next: 1, points: { touki: 2, keihi: 1 } },
-                    { text: "寝つきが悪い・眠りが浅い", next: 1, points: { kamitsure: 2, chinpi: 1 } },
-                    { text: "肌荒れや乾燥が気になる", next: 1, points: { gaiyo: 2, juyaku: 1 } },
-                    { text: "とにかく疲れを取りたい", next: 1, points: { shobukon: 2, senkyu: 1 } }
+                    { text: "柑橘の明るい爽やかさ", next: 1, points: { chinpi: 2, sanshin: 1 } },
+                    { text: "小さな花のやさしさ", next: 1, points: { kamitsure: 2, touki: 1 } },
+                    { text: "野の草を思わせる深い香り", next: 1, points: { gaiyo: 2, juyaku: 1 } },
+                    { text: "樹皮や根の力強い香り", next: 1, points: { keihi: 2, senkyu: 1, shobukon: 1 } }
                 ]
             },
             {
-                question: "どんな香りに一番癒やされますか？",
+                question: "袋の中で、どの姿をのぞいてみたい？",
                 options: [
-                    { text: "森のようなウッディな香り", next: 2, points: { keihi: 1, shobukon: 1 } },
-                    { text: "甘くて優しいお花の香り", next: 2, points: { kamitsure: 1, touki: 1 } },
-                    { text: "スッキリしたハーブの香り", next: 2, points: { gaiyo: 1, chinpi: 1 } },
-                    { text: "香りは控えめがいい", next: 2, points: { juyaku: 1, sanshin: 1 } }
+                    { text: "みかんの皮や小さな果実", next: 2, points: { chinpi: 1, sanshin: 1 } },
+                    { text: "カモミールの小さな花", next: 2, points: { kamitsure: 2 } },
+                    { text: "ヨモギの葉や野の草", next: 2, points: { gaiyo: 1, juyaku: 1 } },
+                    { text: "樹皮や、ごつごつした根", next: 2, points: { keihi: 1, touki: 1, senkyu: 1, shobukon: 1 } }
                 ]
             },
             {
-                question: "普段、湯船にはどのくらい浸かりますか？",
+                question: "ふくのゆを、どんな時間にしたい？",
                 options: [
-                    { text: "ほぼ毎日", next: 3, points: { touki: 1, kamitsure: 1 } },
-                    { text: "週末だけ・たまに", next: 3, points: { keihi: 1, shobukon: 1 } },
-                    { text: "シャワーが多い", next: 3, points: { gaiyo: 1, chinpi: 1 } }
+                    { text: "香りをゆっくり味わう", next: 3, points: { keihi: 1, touki: 1 } },
+                    { text: "袋をもんで色の変化を見る", next: 3, points: { sanshin: 1, chinpi: 1 } },
+                    { text: "植物の形をじっくり眺める", next: 3, points: { juyaku: 1, gaiyo: 1 } },
+                    { text: "いつもの夜を少し特別にする", next: 3, points: { kamitsure: 1, shobukon: 1 } }
                 ]
             }
         ];
 
         const herbResults = {
-            touki: { title: "トウキ（当帰）", desc: "ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。" },
-            kamitsure: { title: "カミツレ（洋甘菊）", desc: "ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。" },
-            gaiyo: { title: "ガイヨウ（艾葉）", desc: "ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。" },
-            shobukon: { title: "ショウブ根（菖蒲根）", desc: "ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。" },
-            keihi: { title: "ケイヒ（桂皮）", desc: "ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。" },
-            chinpi: { title: "チンピ（陳皮）", desc: "ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。" },
-            juyaku: { title: "ジュウヤク（十薬）", desc: "ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。" },
-            senkyu: { title: "センキュウ（川キュウ）", desc: "ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。" },
-            sanshin: { title: "サンシシ（山梔子）", desc: "ふくのゆに配合されている10種類の生薬の一つです。今夜はゆったりした入浴時間をお過ごしください。" }
+            touki: { title: "トウキ（当帰）", desc: "細く枝分かれした根を使うトウキ。土と植物を思わせる、奥行きのある特有の香りを持つ生薬です。" },
+            kamitsure: { title: "カミツレ（洋甘菊）", desc: "カモミールとしても親しまれる小さな花。生薬の深い香りに、やさしい爽やかさを添えます。" },
+            gaiyo: { title: "ガイヨウ（艾葉）", desc: "ヨモギまたはオオヨモギの葉と枝先。深い緑と、野の草を思わせる特有の香りを持ちます。" },
+            shobukon: { title: "ショウブ根（菖蒲根）", desc: "名前の通り、根の部分を使う生薬。植物の根まで入った一包の面白さを感じてください。" },
+            keihi: { title: "ケイヒ（桂皮）", desc: "くるりと巻いた樹皮の姿を持つ生薬。甘さと辛さをあわせ持つ、温かみのある芳香が特徴です。" },
+            chinpi: { title: "チンピ（陳皮）", desc: "温州みかんなどの成熟した果皮。明るい柑橘の芳香が、生薬らしい深い香りに爽やかさを重ねます。" },
+            juyaku: { title: "ジュウヤク（十薬）", desc: "葉、茎、花穂を含む地上部を使う生薬。野に育つ植物の姿が、そのまま袋の中に息づきます。" },
+            senkyu: { title: "センキュウ（川芎）", desc: "ごつごつとした根茎を使う生薬。灰褐色の素朴な姿と、印象に残る特有の香りがあります。" },
+            sanshin: { title: "サンシシ（山梔子）", desc: "長卵形をしたクチナシの果実。黄褐色から黄赤色の姿が、植物そのものの色を感じさせます。" }
         };
 
         let currentStep = 0;
